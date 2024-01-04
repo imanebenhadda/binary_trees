@@ -4,7 +4,8 @@ size_t depth(const binary_tree_t *tree);
 unsigned char is_leaf(const binary_tree_t *node);
 const binary_tree_t *get_leaf(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
-int is_perfect_recursive(const binary_tree_t *tree, size_t leaf_depth, size_t level, size_t depth);
+int is_perfect_recursive(const binary_tree_t *tree, size_t leaf_depth,
+size_t level, size_t depth);
 /**
  * depth - Returns the depth of a given
  *         node in a binary tree.
@@ -65,7 +66,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  *
  * Return: If the tree is perfect, 1, otherwise 0.
  */
-int is_perfect_recursive(const binary_tree_t *tree, size_t leaf_depth, size_t level, size_t depth)
+int is_perfect_recursive(const binary_tree_t *tree, size_t leaf_depth,
+size_t level, size_t depth)
 {
 	if (is_leaf(tree))
 		return (level == leaf_depth ? 1 : 0);
